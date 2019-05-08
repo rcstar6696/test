@@ -272,9 +272,9 @@ TARGET_QCOM_BLUETOOTH_VARIANT := caf-msm8998
 
 # Recovery FSTAB
 ifeq ($(AB_OTA_UPDATER), true)
-TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/fstab_AB.qcom
+TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/twrp_AB.fstab
 else
-TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/recovery.fstab
+TARGET_RECOVERY_FSTAB := $(PLATFORM_PATH)/rootdir/etc/twrp.fstab
 endif
 
 # RIL
@@ -308,7 +308,7 @@ PRODUCT_FULL_TREBLE_OVERRIDE := true
 PRODUCT_VENDOR_MOVE_ENABLED := true
 
 # TWRP Support
-ifeq ($(WITH_TWRP),true)
+ifeq ($(BUILD_TWRP),true)
 -include $(PLATFORM_PATH)/twrp.mk
 endif
 

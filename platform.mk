@@ -416,6 +416,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	libtinyxml2
 
+#TWRP
+BUILD_TWRP := true
+
 # USB
 PRODUCT_PACKAGES += \
 	android.hardware.usb@1.0-service.xiaomi_sdm660
